@@ -79,7 +79,7 @@ nav {
 
 @media only screen and (max-width: 767px) {
   .top-row {
-    position: fixed;
+    position: absolute;
     top: 2rem;
     left: 0;
     display: flex;
@@ -87,6 +87,9 @@ nav {
     z-index: 101;
     width: 100%;
     padding: 0 2rem;
+  }
+  .fixed {
+    position: fixed;
   }
   .menu-icon {
     cursor: pointer;
