@@ -42,3 +42,15 @@ li {
 ul {
   list-style: none;
 }
+
+.attribution {
+  margin-top: 1rem;
+  font-size: 12px;
+  text-align: left;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+.attribution a:hover {
+  color: hsl(197, 83%, 55%);
+}
