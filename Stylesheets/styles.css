@@ -41,10 +41,10 @@
   border: 2px solid white;
   color: white;
   text-transform: uppercase;
-  font-size: 2.75rem;
+  font-size: 10vw;
   width: min-content;
   padding: 16px;
-  margin: auto 24px;
+  margin: auto 12px;
 }
 
 /*===============
