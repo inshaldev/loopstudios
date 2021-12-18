@@ -17,54 +17,6 @@
     left: 100%;
   }
 }
-@keyframes menuIconSpan1 {
-  from {
-    transform: none;
-  }
-  to {
-    transform: rotate(45deg) translateY(5px) translateX(5px);
-  }
-}
-@keyframes menuIconSpan2 {
-  from {
-    width: 100%;
-  }
-  to {
-    width: 0;
-  }
-}
-@keyframes menuIconSpan3 {
-  from {
-    transform: none;
-  }
-  to {
-    transform: rotate(-45deg) translateY(-5px) translateX(5px);
-  }
-}
-@keyframes menuIconSpanBack1 {
-  from {
-    transform: rotate(45deg) translateY(5px) translateX(5px);
-  }
-  to {
-    transform: none;
-  }
-}
-@keyframes menuIconSpanBack2 {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-@keyframes menuIconSpanBack3 {
-  from {
-    transform: rotate(-45deg) translateY(-5px) translateX(5px);
-  }
-  to {
-    transform: none;
-  }
-}
 /*===============
        HERO
 =================*/
@@ -123,36 +75,39 @@ nav {
   .fixed {
     position: fixed;
   }
-  .menu-icon {
+  .hamburger .line {
+    width: 30px;
+    height: 2px;
+    background-color: #ecf0f1;
+    display: block;
+    margin: 6px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .hamburger:hover {
     cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-    width: 24px;
   }
-  .menu-icon span {
-    border: 1px solid white;
-    width: 100%;
+
+  /* ONE */
+
+  #hamburger-1.is-active .line:nth-child(2) {
+    opacity: 0;
   }
-  .menu-is-back-boom span:nth-of-type(1) {
-    animation: menuIconSpanBack1 200ms forwards;
+
+  #hamburger-1.is-active .line:nth-child(1) {
+    -webkit-transform: translateY(5px) rotate(45deg);
+    -ms-transform: translateY(5px) rotate(45deg);
+    -o-transform: translateY(5px) rotate(45deg);
+    transform: translateY(5px) rotate(45deg);
   }
-  .menu-is-back-boom span:nth-last-of-type(2) {
-    animation: menuIconSpanBack2 200ms forwards;
-  }
-  .menu-is-back-boom span:nth-of-type(3) {
-    animation: menuIconSpanBack3 200ms forwards;
-  }
-  .closed span:nth-of-type(1) {
-    animation: menuIconSpan1 200ms forwards;
-  }
-  .closed span:nth-last-of-type(2) {
-    animation: menuIconSpan2 200ms forwards;
-  }
-  .closed span:nth-of-type(3) {
-    animation: menuIconSpan3 200ms forwards;
+
+  #hamburger-1.is-active .line:nth-child(3) {
+    -webkit-transform: translateY(-13px) rotate(-45deg);
+    -ms-transform: translateY(-13px) rotate(-45deg);
+    -o-transform: translateY(-13px) rotate(-45deg);
+    transform: translateY(-13px) rotate(-45deg);
   }
   .nav-links {
     animation: navbarOpens 250ms forwards;
